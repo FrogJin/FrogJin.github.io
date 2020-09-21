@@ -1,0 +1,119 @@
+/*--------------------------------------------------------------
+	Global Styles
+--------------------------------------------------------------*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: sans-serif;
+	overflow-x: hidden;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust:     100%;
+}
+
+body{
+  width: 100%;
+  height: auto;
+  background-color: hsl(0, 0%, 95%);
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+/*--------------------------------------------------------------
+	unselectable Style
+--------------------------------------------------------------*/
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.centered {
+    margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+	Project Content Styles
+--------------------------------------------------------------*/
+.content {
+	border: 1px solid #A8D8B9;
+	height: 1500px;
+	width: 80%;
+	margin: auto;
+	box-sizing: border-box;
+	display: block;
+}
+
+.gallery {
+	border: 1px solid #A8D8B9;
+	height: 800px;
+	width: 40%;
+	margin: 2.5% 5%;
+	display: inline-block;
+	overflow: hidden;
+	text-align: center;
+}
+
+.picture {
+	border: 1px solid #A8D8B9;
+	padding-top: 90%;
+	width: 90%;
+	margin: 5%;
+	display: inline-block;
+  background-color: #FFFFFF;
+	background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.picture:hover {
+	cursor: pointer;
+}
+
+.thumbnails {
+	border: 1px solid #A8D8B9;
+	height: 120px;
+	width: 90%;
+	text-align: center;
+}
+
+.thumbnail {
+	border: 1px solid #FFFFFF;
+	height: 100px;
+	width: 20%;
+	margin: 5px;
+	display: inline-block;
+  background-color: #FFFFFF;
+	background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.thumbnail:hover {
+	border: 1px solid #51A8DD;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.info {
+	border: 1px solid #A8D8B9;
+	height: 800px;
+	width: 40%;
+	margin: 2.5% 4%;
+	display: inline-block;
+}
+
+.description {
+	border: 1px solid #A8D8B9;
+	height: 200px;
+	width: 90%;
+	margin: 2.5% 5%;
+	float: left;
+}

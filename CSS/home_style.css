@@ -1,0 +1,484 @@
+/*--------------------------------------------------------------
+	Global Styles
+--------------------------------------------------------------*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: sans-serif;
+	overflow-x: hidden;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust:     100%;
+	display: block;
+}
+
+body{
+  width: 100%;
+  height: auto;
+  /* background-color: hsl(0, 0%, 95%); */
+  background-color: #FFFFFF;
+}
+
+/*--------------------------------------------------------------
+	Main Area
+--------------------------------------------------------------*/
+.main-area {
+	margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+	Top Navigation Styles
+--------------------------------------------------------------*/
+.home-nav {
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	/* opacity: 0.8; */
+	background-color: #FFFFFF;
+}
+
+.home-nav ul {
+
+}
+
+.home-nav ul li {
+	list-style: none;
+	display: block;
+	float: left;
+	line-height: 50px;
+}
+
+.home-nav ul li img {
+	width: auto;
+	height: 50px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.home-nav ul li a {
+	padding: 0px 20px 0px 20px;
+	display: block;
+	text-decoration: none;
+	font-size: 20px;
+	font-family: "Merienda";
+	color: hsla(240, 21.2%, 66.7%, 50%);;
+}
+
+.home-nav ul li a:hover {
+	color: hsla(240, 21.2%, 66.7%, 100%);;
+}
+
+/*--------------------------------------------------------------
+	Top Banner Styles
+--------------------------------------------------------------*/
+
+.top-banner-wrapper {
+    position: relative;
+    display: table;
+    margin: auto;
+    margin-top: 50px;
+	width: 90%;
+	height: -webkit-calc(100vh - 50px);
+
+    background-image: url(../images/homeImages/topBanner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+	background-color: hsla(240, 8.4%, 62.7%, 100%);
+    background-attachment: fixed;
+}
+
+.top-banner-text-wrapper {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 25%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+
+    /* border-style: solid; */
+    /* border-radius: 10px; */
+    /* border-color: #000000; */
+    /* border-width: medium; */
+}
+
+.top-banner-text-wrapper h1 {
+	width: fit-content;
+    height: fit-content;
+
+    color: #3C3C65;
+    font-size: 5vw;
+    font-family: "FZShuTi";
+	/* background-color: hsla(250, 65%, 90%, 30%); */
+}
+
+.top-banner-text-wrapper h2 {
+    width: fit-content;
+    height: fit-content;
+
+    color: #3C3C65;
+    font-size: 3vw;
+    font-family: "Merienda";
+	/* background-color: hsla(100, 65%, 90%, 30%); */
+}
+
+.top-banner-text-wrapper h3 {
+    width: fit-content;
+    height: fit-content;
+
+    color: #3C3C65;
+    font-size: 1vw;
+    font-family: "Merienda";
+	/* background-color: hsla(150, 65%, 90%, 30%); */
+}
+
+.top-banner-arrow {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	display: inline-block;
+}
+
+.top-banner-arrow:before,
+.top-banner-arrow:after {
+	background-color: #3C3C65;
+	content: "";
+	height: 2px;
+	left: 50%;
+	margin-left: -11px;
+	margin-top: -1px;
+	position: absolute;
+	top: 50%;
+	width: 22px;
+}
+
+.top-banner-arrow:before {
+	-webkit-transform: translateX(-7px) rotate(45deg);
+	-moz-transform: translateX(-7px) rotate(45deg);
+	transform: translateX(-7px) rotate(45deg);
+}
+
+.top-banner-arrow:after {
+	-webkit-transform: translateX(7px) rotate(-45deg);
+	-moz-transform: translateX(7px) rotate(-45deg);
+	transform: translateX(7px) rotate(-45deg);
+}
+
+/*--------------------------------------------------------------
+	Story
+--------------------------------------------------------------*/
+.story {
+	width: 100%;
+	height: 100vh;
+}
+
+.story h1 {
+	padding-top: 5%;
+	font-size: 3em;
+	font-family: "Merienda";
+	text-align: center;
+}
+
+.story h2 {
+	padding-top: 1%;
+	padding-bottom: 5%;
+	font-size: 2em;
+	font-family: "FZShuTi";
+	text-align: center;
+}
+
+.story p {
+	padding-bottom: 5%;
+	font-size: 1.2em;
+}
+
+.story-arrow {
+	width: 30px;
+	height: 30px;
+	position: relative;
+	bottom: -30px;
+	left: 50%;
+	display: inline-block;
+}
+
+.story-arrow:before,
+.story-arrow:after {
+	background-color: #000000;
+	content: "";
+	height: 2px;
+	left: 50%;
+	margin-left: -11px;
+	margin-top: -1px;
+	position: absolute;
+	top: 50%;
+	width: 22px;
+}
+
+.story-arrow:before {
+	-webkit-transform: translateX(-7px) rotate(45deg);
+	-moz-transform: translateX(-7px) rotate(45deg);
+	transform: translateX(-7px) rotate(45deg);
+}
+
+.story-arrow:after {
+	-webkit-transform: translateX(7px) rotate(-45deg);
+	-moz-transform: translateX(7px) rotate(-45deg);
+	transform: translateX(7px) rotate(-45deg);
+}
+
+/*--------------------------------------------------------------
+	Introduction
+--------------------------------------------------------------*/
+.introduction {
+	margin: 0 auto;
+	max-width: 55em;
+	height: 40vh;
+    font-family: "Merienda";
+}
+
+/*--------------------------------------------------------------
+	Reason
+--------------------------------------------------------------*/
+.reason {
+	margin: 0 auto;
+	max-width: 55em;
+	height: 50vh;
+	background: #B51C35;
+	color: #FFFFFF;
+	border-radius: 20px;
+    font-family: "Merienda";
+}
+
+.reason p {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+/*--------------------------------------------------------------
+	Career Interests Banner
+--------------------------------------------------------------*/
+.career-banner {
+    padding: 0.5em 2em;
+    padding-bottom: 1.5em;
+    background: #B51C35;
+    text-align: left;
+    font-family: "Merienda";
+}
+
+.career-banner h1 {
+    padding-top: 2%;
+    font-family: "Merienda";
+    font-size: 45px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.career-banner h2 {
+    padding-bottom: 2%;
+    font-family: "FZShuTi";
+    font-size: 30px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.career-banner center {
+    /* padding: 0 1em; */
+	color: #FFFFFF;
+    font-size: 18px;
+}
+
+/*--------------------------------------------------------------
+	Projects Showcases
+--------------------------------------------------------------*/
+.projects-showcases {
+	margin: 2% auto;
+	max-width: 75em;
+}
+
+.projects-showcases h1 {
+	font-family: "Merienda";
+    font-size: 35px;
+	text-align: center;
+}
+
+.projects-showcases h2 {
+	margin-bottom: 2%;
+	font-family: "FZShuTi";
+    font-size: 25px;
+	text-align: center;
+}
+
+.projects-showcases ul li {
+	max-width: 25em;
+	list-style: none;
+	display: inline-block;
+	float: left;
+	/* line-height: 70px; */
+}
+
+.projects-showcases figure {
+	display: block;
+  margin-bottom: 1em;
+  padding-bottom: 2em;
+	text-align: center;
+}
+
+.projects-showcases figure img {
+  max-width: 75%;
+	margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2em;
+}
+
+.projects-showcases figure video {
+  max-width: 100%;
+	margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1.5em;
+}
+
+.projects-showcases figcaption {
+	text-align: center;
+}
+
+.projects-showcases figcaption p {
+	margin-bottom: 5%;
+}
+
+/*--------------------------------------------------------------
+	Content Button
+--------------------------------------------------------------*/
+.content-button {
+	padding: .5em 1em;
+	border: 3px solid #B51C35;
+	border-radius: 10px;
+	font-weight: 600;
+}
+
+a.content-button {
+	color: black;
+	text-decoration: none;
+}
+
+a.content-button:focus,
+a.content-button:hover {
+	background: #B51C35;
+	color: #FFFCED;
+}
+
+/*--------------------------------------------------------------
+Footer styles
+--------------------------------------------------------------*/
+.footer {
+	margin-top: 27em;
+  padding: 3em 3em 0;
+  background: hsl(0, 0%, 10%);
+  color: #FFFCED;
+	text-align: center;
+}
+
+.footer ul li {
+	max-width: 25em;
+	float: left;
+}
+
+.footer-widgets h4 {
+	margin-bottom: 5%;
+	font-family: "Merienda";
+  font-size: 1.5em;
+}
+
+.footer-widgets a {
+  display: block;
+  margin-top: 1em;
+	margin-left: 10%;
+	margin-right: 10%;
+  padding: 0 .5em;
+  font-size: 1.5em;
+  font-weight: 900;
+  color: #FFFCED;
+  text-align: center;
+  text-decoration: none;
+  border: 5px solid #FFFCED;
+	border-radius: 10px;
+}
+
+.footer-widgets a:hover {
+  background: #B51C35;
+  cursor: pointer;
+}
+
+.footer-widgets textarea {
+	width: 75%;
+	height: 50%;
+	padding: 12px 20px;
+	border: 5px solid #FFFCED;
+	border-radius: 10px;
+	background-color: hsl(0, 0%, 10%);
+	color: #FFFCED;
+	resize: none;
+	outline: none;
+}
+
+.footer-widgets textarea:focus {
+	border: 5px solid #B51C35;
+}
+
+@media screen and (min-width: 50em) {
+  .footer-widgets {
+		margin: auto;
+		max-width: 75%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .widget {
+    width: 25%;
+  }
+}
+
+.social-nav {
+  margin: 4em -3em 0;
+  padding: 20px;
+  background: #B51C35;
+}
+
+.social-nav ul {
+  -js-display: flex;
+  display: inline-block;
+  justify-content: center;
+	margin-top: 20px;
+	list-style: none;
+  list-style-type: none;
+}
+
+.social-nav a {
+	padding: 16px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.icon-github {
+	background-image: url('../images/icons/GitHub_Mark_Light_32px.png');
+	background-repeat: no-repeat;
+}
+
+.icon-linkedin {
+	background-image: url('../images/icons/LinkedIn_32px.png');
+	background-repeat: no-repeat;
+}
+
+.icon-facebook {
+	/* width: 32px; */
+	background-image: url('../images/icons/Facebook_Light_32px.png');
+	background-repeat: no-repeat;
+}
