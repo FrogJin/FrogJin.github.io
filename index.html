@@ -15,107 +15,80 @@
   </head>
 
   <body>
-    <div class="main-area">
+    <div class="main-area center">
       <div id="topBannerWrapper" class="top-banner-wrapper">
         <div class="top-banner-text-wrapper">
           <h1>金裕明</h1>
           <h2>Yuming Jin</h2>
-          <h3>
-            B.S. Computer Engineering<br />
-            University of Illinois, Urbana Champaign<br />
-            M.S. Robotics (Current)<br />
-            Northwestern University
-          </h3>
+          <h3>B.S. Computer Engineering</h3>
+          <h4>University of Illinois, Urbana Champaign</h4>
+          <h3>M.S. Robotics (Current)</h3>
+          <h4>Northwestern University</h4>
         </div>
-        <a href="#" class="top-banner-arrow"></a>
+        <!-- <a href="#" class="top-banner-arrow"></a> -->
       </div>
 
-      <nav class="home-nav">
-        <ul>
-          <li><img src="images/icons/YJ_Logo_Light.png"></li>
-          <li><a href="index.html">Portfolio</a></li>
-          <li><a href="HTML/projects.html">Projects</a></li>
+      <div class="projects-container">
+        <h1>Recent Projects</h1>
+        <h2>近期项目</h2>
+        <ul style="display: inline-block;">
+          <li>
+            <div id="me495Demo" class="demo-img center" style="background-image:url(files/projects/me495_embedded_systems/demo.jpg);" onclick="demo('me495')">
+              <p>
+                ME 495 Final Projects<br>
+                Connect-4<br>
+                Oct 2020 - Dec 2020
+              </p>
+            </div>
+          </li>
+          <li>
+            <div id="ece498Demo" class="demo-img center" style="background-image:url(files/projects/ece498_walk_distance/demo.jpg);" onclick="demo('ece498')">
+              <p>
+                ECE 498 Final Projects<br>
+                Walk distance tracking<br>
+                May 2018
+              </p>
+            </div>
+          </li>
+          <li>
+            <div id="vispracticeDemo" class="demo-img center" style="background-image:url(images/projects/vispractice.jpg);" onclick="demo('vispractice')">
+              <p>
+                Vispractice Intern Project<br>
+                JD.com mobile info crawler<br>
+                June 2017 - Aug 2017
+              </p>
+            </div>
+          </li>
+          <li>
+            <div id="ece110hDemo" class="demo-img center" style="background-image:url(images/projects/ece110h.jpg);" onclick="demo('ece110h')">
+              <p>
+                ECE 210H Final Projects<br>
+                Arduino Laser Guitar<br>
+                May 2017
+              </p>
+            </div>
+          </li>
+          <li>
+            <div id="iroboticsDemo" class="demo-img center" style="background-image:url(images/projects/irobotics.jpg);" onclick="demo('irobotics')">
+              <p>
+                iRobotics Project Team<br>
+                Robotic Arm<br>
+                July 2016 - Apr. 2017
+              </p>
+            </div>
+          </li>
+          <li>
+            <div id="papeiDemo" class="demo-img center" style="background-image:url(images/projects/papei.jpg);" onclick="demo('papei')">
+              <p>
+                PāPēi<br>
+                CIE Past Papers Viewer<br>
+                Jan. 2016 - May 2017
+              </p>
+            </div>
+          </li>
         </ul>
-      </nav>
-
-      <div class="story">
-        <div class="introduction">
-          <h1>Welcome</h1>
-          <h2>欢迎光临</h2>
-          <p>
-            Hi there, I am Yuming(Tim) Jin. This is my profile webpage which I created as an individual <br />
-            project during summer 2018. The webpage is still under construction. If you find anything <br />
-            unsatisfying about the webpage, please leave a message at the bottom of the page. Thx :D <br />
-          </p>
-        </div>
-        <div class="reason">
-          <h1>Why am I Here?</h1>
-          <h2>勿忘初心</h2>
-          <p>
-            This is a reminder to myself about why I started and where I am heading. <br />
-            I dream of utilize my knowledge of hardware and software to make my life better and to make the world a better place. <br />
-            I came to US for the best education in Computer Engineering and for the chance to work here. I chose this road myself and I will make it. <br />
-            I apologize to my parents for beening 7000 miles away from them, and still have nothing to repay their upbringing. <br />
-            Thanks to their trust and cares, I am still pursuing my dream.
-          </p>
-        </div>
-        <a href="#" class="story-arrow"></a>
-      </div>
-
-      <div class="career-banner">
-        <h1>Career Interests</h1>
-        <h2>职业规划</h2>
-        <center>
-          Area of Interest: Robotics, Electronic, Software Engineering<br />
-          Looking for 2021 Summer Internship, and 2022 Spring Full-Time<br />
-        </center>
       </div>
     </div>
-
-    <section class="projects-showcases">
-      <h1>Recent Projects</h1>
-      <h2>近期成果</h2>
-      <ul>
-        <li>
-          <figure>
-            <img src="projects/ece498_walk_distance/demo.jpg" />
-            <figcaption>
-                <h3>Walk Distance Tracking</h3>
-                <p>ECE 498 Final Project</p>
-                <a class="content-button" href="https://github.com/FrogJin/ECE498_Final_Project" target="_blank">
-                  GitHub Code
-                </a>
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure>
-            <video controls>
-              <source src="projects/ece110h_laser_guitar/demo.mp4" type="video/mp4">
-            </video>
-            <figcaption>
-                <h3>Laser Guitar</h3>
-                <p>ECE 110H Final Project</p>
-                <a class="content-button" href="https://github.com/FrogJin/ECE110H_Final_Project" target="_blank">
-                  GitHub Code
-                </a>
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure>
-            <img src="projects/vispractice_jd_crawler/demo.jpg" />
-            <figcaption>
-                <h3>JD Webcrawler</h3>
-                <p>JD.com</p>
-                <a class="content-button" href="https://github.com/FrogJin/Vispractice_JD_Web_Crawler" target="_blank">
-                  GitHub Code
-                </a>
-            </figcaption>
-          </figure>
-        </li>
-      </ul>
-    </section>
 
     <footer class="footer">
       <section class="footer-widgets">
@@ -138,7 +111,7 @@
         </div>
         <div class="widget">
           <h4>View My Resume</h4>
-          <p>Yuming Jin Junior Resume</p>
+          <p>Yuming Jin Winter Resume</p>
           <a href="files/Tim Jin Resume.pdf">Take a Look</a>
         </div>
         <div class="widget">
@@ -156,6 +129,187 @@
           </ul>
       </nav>
     </footer>
+
+    <!-- ME 495 Modal Box -->
+    <div id="me495Modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeDemo('me495')">&times;</span>
+        <div id="me495Heading" style="padding-bottom: 3%;">
+          <h1 class="heading">Connect-4</h1>
+          <h3>Oct 2020 - Dec 2018, Group project with Peter Sauer, Bill Bi, Juntao He</h3>
+          <h3>Northwestern ME495 Embedded Systems Final Project</h3>
+        </div>
+
+        <div id="me495Intro">
+          <h2 class="heading">Introduction</h2>
+          <p>
+            This project is about utilizing a Sawyer robot arm to play the famous board game connect-4 against a human player. As two players take turns and place pieces,
+            the first who vertically, horizontally or diagonally connects four of its color wins the game.
+          </p>
+        </div>
+
+        <div id="me495Gallery" class="gallery">
+          <div class="slides">
+            <div class="number-text">1 / 5</div>
+            <img class="slide-image" src="files/projects/me495_embedded_systems/image2.jpeg">
+          </div>
+          <div class="slides">
+            <div class="number-text">2 / 5</div>
+            <video class="slide-video" controls>
+              <source src="files/projects/me495_embedded_systems/video_0.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="slides">
+            <div class="number-text">3 / 5</div>
+            <video class="slide-video" controls>
+              <source src="files/projects/me495_embedded_systems/video_1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="slides">
+            <div class="number-text">4 / 5</div>
+            <video class="slide-video" controls>
+              <source src="files/projects/me495_embedded_systems/video_2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="slides">
+            <div class="number-text">5 / 5</div>
+            <video class="slide-video" controls>
+              <source src="files/projects/me495_embedded_systems/video_3_crop_cut.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <a class="prev" onclick="plusSlides('me495', -1)">&#10094;</a>
+          <a class="next" onclick="plusSlides('me495', 1)">&#10095;</a>
+
+          <div class="caption-container">
+            <p id="me495Caption"></p>
+          </div>
+
+          <div class="row">
+            <div class="column-me495">
+              <div class="gallery-demo cursor" onclick="currentSlides('me495', 1)">
+                <img src="files/projects/me495_embedded_systems/image2.jpeg" style="width: 100%;">
+                <h1 class="demo-caption">Connect-4 board setup</h1>
+              </div>
+            </div>
+            <div class="column-me495">
+              <div class="gallery-demo cursor" onclick="currentSlides('me495', 2)">
+                <img class="demo-poster" src="files/projects/me495_embedded_systems/video_0_poster.jpg" style="width: 100%;">
+                <img class="demo-cover" src="files/images/video_play.png" style="width: 40%;">
+                <h1 class="demo-caption">Play against the AI and win</h1>
+              </div>
+            </div>
+            <div class="column-me495">
+              <div class="gallery-demo cursor" onclick="currentSlides('me495', 3)">
+                <img class="demo-poster" src="files/projects/me495_embedded_systems/video_1_poster.jpg" style="width: 100%;">
+                <img class="demo-cover" src="files/images/video_play.png" style="width: 40%;">
+                <h1 class="demo-caption">Play against the AI and loss</h1>
+              </div>
+            </div>
+            <div class="column-me495">
+              <div class="gallery-demo cursor" onclick="currentSlides('me495', 4)">
+                <img class="demo-poster" src="files/projects/me495_embedded_systems/video_2_poster.jpg" style="width: 100%;">
+                <img class="demo-cover" src="files/images/video_play.png" style="width: 40%;">
+                <h1 class="demo-caption">Early testing</h1>
+              </div>
+            </div>
+            <div class="column-me495">
+              <div class="gallery-demo cursor" onclick="currentSlides('me495', 5)">
+                <img class="demo-poster" src="files/projects/me495_embedded_systems/video_3_poster.jpg" style="width: 100%;">
+                <img class="demo-cover" src="files/images/video_play.png" style="width: 40%;">
+                <h1 class="demo-caption">tk connect-4 AI simulation</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="me495Intro" style="padding-top: 3%;">
+          <h2 class="heading">Architecture</h2>
+          <h2 class="sub-heading">Robot</h2>
+          <p>
+            We choose to build our project using the Sawyer robot arm available in The Center of Robotics and Biosystems at McCormick School of Engineering.
+            Since the connect-4 only requires the player to pick and place the piece in the slots on top of the game board, Sawyer becomes a good choice with its
+            powerful arm.
+          </p>
+          <h2 class="sub-heading">Computer Vision</h2>
+          <p>
+            Sawyer is equipped with cameras in its head and arm which we used for our computer vision tasks.
+            To increase the accuracy of the results, we used a combination of Hough Line transformations and april tags.<br>
+            The first task is to visualize the board and the pieces inside using the head camera.
+            The resultant state of the board is stored into a 2D-array for future algorithms.<br>
+            The second task is to locate the slot which the AI wants to put its piece in on its turn using the arm camera.<br>
+            (Contributted by Peter Sauer & Bill Bi)
+          </p>
+          <h2 class="sub-heading">Artificial Intelligence</h2>
+          <p>
+            We implement the Minimax algorithm to build a perfect game strategy for the AI.
+            (Contributted by Juntao He & Me)
+          </p>
+          <h2 class="sub-heading">Simulation</h2>
+          <p>
+            Since our access to the lab is heavily limited by the COVID pandamic, we use the tk module in python to build a simulation of the full gameplay to allow easier testing.
+            (Contributed by Me)
+          </p>
+        </div>
+
+        <div id="me495Close" class="modal-nav" style="padding-top: 3%;">
+          <button onclick="location.href='https://github.com/FrogJin/final-project-connect-4'">Github Page</a>
+          <button onclick="closeDemo('me495')">Close Project</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ECE 498 Modal Box -->
+    <div id="ece498Modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeDemo('ece498')">&times;</span>
+        <h1>UIUC ECE498 Mobile Computing and Applications</h1>
+        <h2>Apr 2018 - May 2018, Group project with Junnun Safoan</h2>
+        <div id="ece498Gallery" class="gallery">
+          <div class="slides">
+            <div class="number-text">1 / 4</div>
+            <img class="slide-image" src="files/projects/ece498_walk_distance/1.5m_4Steps.jpg">
+          </div>
+
+          <div class="slides">
+            <div class="number-text">2 / 4</div>
+            <img class="slide-image" src="files/projects/ece498_walk_distance/3m_4steps.jpg">
+          </div>
+
+          <div class="slides">
+            <div class="number-text">3 / 4</div>
+            <img class="slide-image" src="files/projects/ece498_walk_distance/3m_6steps.jpg">
+          </div>
+
+          <div class="slides">
+            <div class="number-text">4 / 4</div>
+            <img class="slide-image" src="files/projects/ece498_walk_distance/4.5m_8steps.jpg">
+          </div>
+
+          <a class="prev" onclick="plusSlides('ece498', -1)">&#10094;</a>
+          <a class="next" onclick="plusSlides('ece498', 1)">&#10095;</a>
+
+          <div class="caption-container">
+            <p id="ece498Caption"></p>
+          </div>
+
+          <div class="row">
+            <div class="column-ece498">
+              <img class="gallery-demo cursor" src="files/projects/ece498_walk_distance/1.5m_4Steps.jpg" style="width: 100%;" onclick="currentSlides('ece498', 1)" alt="1.5 meter, 4 steps. (3 steps detected)">
+            </div>
+            <div class="column-ece498">
+              <img class="gallery-demo cursor" src="files/projects/ece498_walk_distance/3m_4steps.jpg" style="width: 100%;" onclick="currentSlides('ece498', 2)" alt="3 meter, 4 steps. (4 steps detected)">
+            </div>
+            <div class="column-ece498">
+              <img class="gallery-demo cursor" src="files/projects/ece498_walk_distance/3m_6steps.jpg" style="width: 100%;" onclick="currentSlides('ece498', 3)" alt="3 meter, 6 steps. (5 steps detected)">
+            </div>
+            <div class="column-ece498">
+              <img class="gallery-demo cursor" src="files/projects/ece498_walk_distance/4.5m_8steps.jpg" style="width: 100%;" onclick="currentSlides('ece498', 4)" alt="4.5 meter, 8 steps. (5 steps detected)">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </body>
 
