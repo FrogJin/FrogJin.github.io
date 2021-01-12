@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'JinWen';
+	src: url('HuaKangJinWenTiW30-1.eot');
+	src: url('HuaKangJinWenTiW30-1.woff2') format('woff2'),
+		 url('HuaKangJinWenTiW30-1.woff') format('woff'),
+		 url('HuaKangJinWenTiW30-1.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

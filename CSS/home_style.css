@@ -37,13 +37,6 @@ body{
 	cursor: pointer;
 }
 
-@font-face {
-	font-family: 'JinWen';
-	font-style: normal;
-  	font-weight: 400;
-	src: url('../files/fonts/HuaKangJinWenTiW30-1.woff2') format('woff2');
-  }
-
 /*--------------------------------------------------------------
 	Main Area
 --------------------------------------------------------------*/
@@ -91,7 +84,8 @@ body{
     height: fit-content;
     color: white;
     font-size: 5vw;
-    font-family: "FZShuTi";
+	/* font-family: "FZShuTi"; */
+	font-family: 'Ma Shan Zheng', cursive;
 	/* background-color: hsla(250, 65%, 90%, 30%); */
 }
 
@@ -177,7 +171,8 @@ body{
 
 .projects-container h2 {
 	margin-bottom: 2%;
-	font-family: "FZShuTi";
+	/* font-family: "FZShuTi"; */
+	font-family: 'Ma Shan Zheng', cursive;
     font-size: 25px;
 	text-align: center;
 }
