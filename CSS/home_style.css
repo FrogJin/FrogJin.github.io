@@ -436,18 +436,6 @@ Modal box styles
 	clear: both;
 }
 
-/* 4 Images */
-.column-ece498 {
-	position: relative;
-	float: left;
-	margin-left: 0.5%;
-	margin-right: 0.5%;
-	margin-top: auto;
-	margin-bottom: auto;
-	padding-top: 0.5%;
-	width: 20%;
-}
-
 /* 1 Image, 4 videos */
 .column-me495 {
 	position: relative;
@@ -458,6 +446,30 @@ Modal box styles
 	margin-bottom: auto;
 	padding-top: 0.5%;
 	width: 15%;
+}
+
+/* 3 videos */
+.column-me449 {
+	position: relative;
+	float: left;
+	margin-left: 0.5%;
+	margin-right: 0.5%;
+	margin-top: auto;
+	margin-bottom: auto;
+	padding-top: 0.5%;
+	width: 25%;
+}
+
+/* 4 Images */
+.column-ece498 {
+	position: relative;
+	float: left;
+	margin-left: 0.5%;
+	margin-right: 0.5%;
+	margin-top: auto;
+	margin-bottom: auto;
+	padding-top: 0.5%;
+	width: 20%;
 }
 
 /* Add a transparency effect for thumbnail images */
@@ -586,17 +598,17 @@ Social navigation Bar
 }
 
 .icon-github {
-	background-image: url('../images/icons/GitHub_Mark_Light_32px.png');
+	background-image: url('../files/icons/GitHub_Mark_Light_32px.png');
 	background-repeat: no-repeat;
 }
 
 .icon-linkedin {
-	background-image: url('../images/icons/LinkedIn_32px.png');
+	background-image: url('../files/icons/LinkedIn_32px.png');
 	background-repeat: no-repeat;
 }
 
 .icon-facebook {
 	/* width: 32px; */
-	background-image: url('../images/icons/Facebook_Light_32px.png');
+	background-image: url('../files/icons/Facebook_Light_32px.png');
 	background-repeat: no-repeat;
 }

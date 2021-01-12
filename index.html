@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Yuming Jin Portfolio</title>
-    <link rel="shortcut icon" href="images/icons/YJ_Logo_64px.ico">
+    <link rel="shortcut icon" href="files/icons/YJ_Logo_64px.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
@@ -57,7 +57,7 @@
             </div>
           </li>
           <li>
-            <div id="vispracticeDemo" class="demo-img center" style="background-image:url(images/projects/vispractice.jpg);" onclick="demo('vispractice')">
+            <div id="vispracticeDemo" class="demo-img center" style="background-image:url(files/projects/vispractice_jd_crawler/demo.jpg);" onclick="demo('vispractice')">
               <p>
                 Vispractice Intern Project<br>
                 JD.com mobile info crawler<br>
@@ -66,7 +66,7 @@
             </div>
           </li>
           <li>
-            <div id="ece110hDemo" class="demo-img center" style="background-image:url(images/projects/ece110h.jpg);" onclick="demo('ece110h')">
+            <div id="ece110hDemo" class="demo-img center" style="background-image:url(files/projects/ece110h_laser_guitar/demo.jpg);" onclick="demo('ece110h')">
               <p>
                 ECE 210H Final Projects<br>
                 Arduino Laser Guitar<br>
@@ -75,7 +75,7 @@
             </div>
           </li>
           <li>
-            <div id="iroboticsDemo" class="demo-img center" style="background-image:url(images/projects/irobotics.jpg);" onclick="demo('irobotics')">
+            <div id="iroboticsDemo" class="demo-img center" style="background-image:url(files/projects/irobotics_16_projects_team/demo.jpg);" onclick="demo('irobotics')">
               <p>
                 iRobotics Project Team<br>
                 Robotic Arm<br>
@@ -84,7 +84,7 @@
             </div>
           </li>
           <li>
-            <div id="papeiDemo" class="demo-img center" style="background-image:url(images/projects/papei.jpg);" onclick="demo('papei')">
+            <div id="papeiDemo" class="demo-img center" style="background-image:url(files/projects/papei/demo.jpg);" onclick="demo('papei')">
               <p>
                 PāPēi<br>
                 CIE Past Papers Viewer<br>
@@ -136,13 +136,91 @@
       </nav>
     </footer>
 
+    <!-- ME 449 Modal Box -->
+    <div id="me449Modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeDemo('me449')">&times;</span>
+        <div id="me449Heading" style="padding-bottom: 3%;">
+          <h1 class="heading">youBot Pick and Place</h1>
+          <h3>Nov 2020 - Dec 2020, Independent Capstone project</h3>
+          <h3>Northwestern ME449 Robotics Manipulation</h3>
+        </div>
+
+        <div id="me449Intro">
+          <h2 class="heading">Introduction</h2>
+          <p>
+            This project is about a software written in python that plans a trajectory for the end-effector of the youBot mobile manipulator 
+            (a mobile base with four mecanum wheels and a 5R robot arm), performs odometry as the chassis moves, and performs feedback control 
+            to drive the youBot to pick up a block at a specified location, carry it to a desired location, and put it down.
+          </p>
+        </div>
+
+        <div id="me449Gallery" class="gallery">
+          <div class="slides">
+            <div class="number-text">1 / 3</div>
+            <video class="slide-video" controls>
+              <source src="files/projects/me449_robotics_manipulation/best_control.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="slides">
+            <div class="number-text">2 / 3</div>
+            <video class="slide-video" controls>
+              <source src="files/projects/me449_robotics_manipulation/overshoot_control.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="slides">
+            <div class="number-text">3 / 3</div>
+            <video class="slide-video" controls>
+              <source src="files/projects/me449_robotics_manipulation/newTask_control.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <a class="prev" onclick="plusSlides('me449', -1)">&#10094;</a>
+          <a class="next" onclick="plusSlides('me449', 1)">&#10095;</a>
+
+          <div class="caption-container">
+            <p id="me449Caption"></p>
+          </div>
+
+          <div class="row">
+            <div class="column-me449">
+              <div class="gallery-demo cursor" onclick="currentSlides('me449', 1)">
+                <img class="demo-poster" src="files/projects/me449_robotics_manipulation/best_poster.png" style="width: 100%;">
+                <img class="demo-cover" src="files/images/video_play.png" style="width: 40%;">
+                <h1 class="demo-caption">Well-tuned feedforward-plus-P controller</h1>
+              </div>
+            </div>
+            <div class="column-me449">
+              <div class="gallery-demo cursor" onclick="currentSlides('me449', 2)">
+                <img class="demo-poster" src="files/projects/me449_robotics_manipulation/overshoot_poster.png" style="width: 100%;">
+                <img class="demo-cover" src="files/images/video_play.png" style="width: 40%;">
+                <h1 class="demo-caption">Overshooted feedforward-plus-PI controller</h1>
+              </div>
+            </div>
+            <div class="column-me449">
+              <div class="gallery-demo cursor" onclick="currentSlides('me449', 3)">
+                <img class="demo-poster" src="files/projects/me449_robotics_manipulation/newTask_poster.png" style="width: 100%;">
+                <img class="demo-cover" src="files/images/video_play.png" style="width: 40%;">
+                <h1 class="demo-caption">Well-tuned feedforward-plus-P controller with different task</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="me449Close" class="modal-nav" style="padding-top: 3%;">
+          <!-- <button onclick="location.href='https://github.com/FrogJin/final-project-connect-4'">Github Page</a> -->
+          <button onclick="closeDemo('me449')">Close Project</button>
+        </div>
+      </div>
+    </div>
+
     <!-- ME 495 Modal Box -->
     <div id="me495Modal" class="modal">
       <div class="modal-content">
         <span class="close" onclick="closeDemo('me495')">&times;</span>
         <div id="me495Heading" style="padding-bottom: 3%;">
           <h1 class="heading">Connect-4</h1>
-          <h3>Oct 2020 - Dec 2018, Group project with Peter Sauer, Bill Bi, Juntao He</h3>
+          <h3>Oct 2020 - Dec 2020, Group project with Peter Sauer, Bill Bi, Juntao He</h3>
           <h3>Northwestern ME495 Embedded Systems Final Project</h3>
         </div>
 
@@ -229,7 +307,7 @@
           </div>
         </div>
 
-        <div id="me495Intro" style="padding-top: 3%;">
+        <div id="me495Architecture" style="padding-top: 3%;">
           <h2 class="heading">Architecture</h2>
           <h2 class="sub-heading">Robot</h2>
           <p>

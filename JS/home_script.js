@@ -28,20 +28,26 @@ $(document).ready(function(){
  * Modal boxes logic and functions
  ******************************************/
 function demo(project_name) {
-  if (project_name == "ece498") {
-    document.getElementById("ece498Modal").style.display = "block";
-  } else if (project_name == "me495") {
-    document.getElementById("me495Modal").style.display = "block";
-  }
+  // if (project_name == "me495") {
+  //   document.getElementById("me495Modal").style.display = "block";
+  // } else if (project_name == "me449") {
+  //   document.getElementById("me449Modal").style.display = "block";
+  // } else if (project_name == "ece498") {
+  //   document.getElementById("ece498Modal").style.display = "block";
+  // }
+  document.getElementById(project_name.concat("Modal")).style.display = "block";
   showSlides(project_name, slideIndex = 1)
 }
 
 function closeDemo(project_name) {
-  if (project_name == "ece498") {
-    document.getElementById("ece498Modal").style.display = "none";
-  } else if (project_name == "me495") {
-    document.getElementById("me495Modal").style.display = "none";
-  }
+  // if (project_name == "ece498") {
+  //   document.getElementById("ece498Modal").style.display = "none";
+  // } else if (project_name == "me449") {
+  //   document.getElementById("me495Modal").style.display = "none";
+  // } else if (project_name == "me495") {
+  //   document.getElementById("me495Modal").style.display = "none";
+  // }
+  document.getElementById(project_name.concat("Modal")).style.display = "none";
 }
 
 // TODO: Hide body y scroll bar when modals are opened
