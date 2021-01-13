@@ -460,6 +460,18 @@ Modal box styles
 	width: 25%;
 }
 
+/* 1 video */
+.column-me314 {
+	position: relative;
+	float: left;
+	margin-left: 0.5%;
+	margin-right: 0.5%;
+	margin-top: auto;
+	margin-bottom: auto;
+	padding-top: 0.5%;
+	width: 25%;
+}
+
 /* 4 Images */
 .column-ece498 {
 	position: relative;
