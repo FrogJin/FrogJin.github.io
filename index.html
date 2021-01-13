@@ -57,6 +57,13 @@
             </div>
           </li>
           <li>
+            <div id="me315Demo" class="demo-img center" style="background-image:url(files/projects/me315_design_element/demo.jpg);" onclick="demo('me315')">
+              <p>
+                Gear-train system design
+              </p>
+            </div>
+          </li>
+          <li>
             <div id="ece498Demo" class="demo-img center" style="background-image:url(files/projects/ece498_walk_distance/demo.jpg);" onclick="demo('ece498')">
               <p>
                 Walk distance tracking
@@ -128,9 +135,9 @@
           <a href="files/Tim Jin Resume.pdf">Take a Look</a>
         </div>
         <div class="widget">
-          <h4>Leave A Message</h4>
-          <textarea id="footerMessage"></textarea>
-          <a id="footerSubmitButton">Submit</a>
+          <!-- <h4>Leave A Message</h4> -->
+          <!-- <textarea id="footerMessage"></textarea> -->
+          <!-- <a id="footerSubmitButton">Submit</a> -->
         </div>
       </section>
 
@@ -397,6 +404,117 @@
         <div id="me314Close" class="modal-nav" style="padding-top: 3%;">
           <button onclick="location.href='https://github.com/FrogJin/ME314_Machine_Dynamics'">Github Page</a>
           <button onclick="closeDemo('me314')">Close Project</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ME 315 Modal Box -->
+    <div id="me315Modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeDemo('me315')">&times;</span>
+        <div id="me315Heading" style="padding-bottom: 3%;">
+          <h1 class="heading">Gear-train system</h1>
+          <h3>Oct 2020 - Dec 2020, Group project with Malav Patel, Chengjian Tao</h3>
+          <h3>Northwestern ME315 Design Element</h3>
+        </div>
+
+        <div id="me315Intro">
+          <h2 class="heading">Introduction</h2>
+          <p>
+            This project is to design a compound three-shaft gear-train system, for transmitting power from shaft A to shaft C with speed reductions.
+            Each member is responsible for one shaft system. Our team consider the best part arrangements for the most effective design in terms of compact structure, 
+            stiffness, power density, or cost. The designs or selections of gears, shafts, and bearings are supported by detailed analyses, 
+            while other components (spacers, seals, end caps, etc.) simply come from selections and geometric designs without calculation. 
+            The shaft systems are modeled using Siemens NX.
+          </p>
+        </div>
+
+        <div id="me315Gallery" class="gallery">
+          <div class="slides">
+            <div class="number-text">1 / 7</div>
+            <img class="slide-image" src="files/projects/me315_design_element/powerflow.png">
+          </div>
+          <div class="slides">
+            <div class="number-text">2 / 7</div>
+            <img class="slide-image" src="files/projects/me315_design_element/shaft.png">
+          </div>
+          <div class="slides">
+            <div class="number-text">3 / 7</div>
+            <img class="slide-image" src="files/projects/me315_design_element/force_analyses.png">
+          </div>
+          <div class="slides">
+            <div class="number-text">4 / 7</div>
+            <img class="slide-image" src="files/projects/me315_design_element/shaft_assembly_drawing.jpg">
+          </div>
+          <div class="slides">
+            <div class="number-text">5 / 7</div>
+            <img class="slide-image" src="files/projects/me315_design_element/shaft_part_drawing.jpg">
+          </div>
+          <div class="slides">
+            <div class="number-text">6 / 7</div>
+            <img class="slide-image" src="files/projects/me315_design_element/gear_part_drawing.jpg">
+          </div>
+          <div class="slides">
+            <div class="number-text">7 / 7</div>
+            <img class="slide-image" src="files/projects/me315_design_element/shaft_cad.png">
+          </div>
+
+          <a class="prev" onclick="plusSlides('me315', -1)">&#10094;</a>
+          <a class="next" onclick="plusSlides('me315', 1)">&#10095;</a>
+
+          <div class="caption-container">
+            <p id="me315Caption"></p>
+          </div>
+
+          <div class="row">
+            <div class="column-me315">
+              <div class="gallery-demo cursor" onclick="currentSlides('me315', 1)">
+                <img src="files/projects/me315_design_element/powerflow.png" style="width: 100%;">
+                <h1 class="demo-caption">Powerflow</h1>
+              </div>
+            </div>
+            <div class="column-me315">
+              <div class="gallery-demo cursor" onclick="currentSlides('me315', 2)">
+                <img src="files/projects/me315_design_element/shaft.png" style="width: 100%;">
+                <h1 class="demo-caption">Shaft A design</h1>
+              </div>
+            </div>
+            <div class="column-me315">
+              <div class="gallery-demo cursor" onclick="currentSlides('me315', 3)">
+                <img src="files/projects/me315_design_element/force_analyses.png" style="width: 100%;">
+                <h1 class="demo-caption">Shaft A force analyses</h1>
+              </div>
+            </div>
+            <div class="column-me315">
+              <div class="gallery-demo cursor" onclick="currentSlides('me315', 4)">
+                <img src="files/projects/me315_design_element/shaft_assembly_drawing.jpg" style="width: 100%;">
+                <h1 class="demo-caption">Shaft A CAD assembly drawing</h1>
+              </div>
+            </div>
+            <div class="column-me315">
+              <div class="gallery-demo cursor" onclick="currentSlides('me315', 5)">
+                <img src="files/projects/me315_design_element/shaft_part_drawing.jpg" style="width: 100%;">
+                <h1 class="demo-caption">Shaft A CAD drawing</h1>
+              </div>
+            </div>
+            <div class="column-me315">
+              <div class="gallery-demo cursor" onclick="currentSlides('me315', 6)">
+                <img src="files/projects/me315_design_element/gear_part_drawing.jpg" style="width: 100%;">
+                <h1 class="demo-caption">Gear 1 CAD drawing</h1>
+              </div>
+            </div>
+            <div class="column-me315">
+              <div class="gallery-demo cursor" onclick="currentSlides('me315', 7)">
+                <img src="files/projects/me315_design_element/shaft_cad.png" style="width: 100%;">
+                <h1 class="demo-caption">Shaft A CAD</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="me315Close" class="modal-nav" style="padding-top: 3%;">
+          <!-- <button onclick="location.href='https://github.com/FrogJin/ME315_Machine_Dynamics'">Github Page</a> -->
+          <button onclick="closeDemo('me315')">Close Project</button>
         </div>
       </div>
     </div>
