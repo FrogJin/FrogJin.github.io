@@ -25,13 +25,11 @@ $(document).ready(function(){
  ******************************************/
 function demoOnClick(event, project_name) {
   event.preventDefault;
-  demo(project_name);
-}
-
-function demo(project_name) {
-  history.pushState({project: project_name}, project_name, "?project=" + project_name);
-  document.getElementById(project_name.concat("Modal")).style.display = "block";
-  showSlides(project_name, slide_idx = 1);
+  if(document.getElementById(project_name.concat("Modal"))!=null) {
+    history.pushState({project: project_name}, project_name, "?project=" + project_name);
+    document.getElementById(project_name.concat("Modal")).style.display = "block";
+    showSlides(project_name, slide_idx = 1);
+  }
 }
 
 function closeDemo(project_name) {
