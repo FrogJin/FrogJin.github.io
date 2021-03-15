@@ -7,7 +7,7 @@ $(document).ready(function(){
   // TODO: Change px to % so element will auto resize when window is resized
   var pcw = $('.projects-container ul li').width()
   $('.projects-container ul li').css({
-    'height': pcw + 'px'
+    'height': 0.5*pcw + 'px'
   })
 
   // Setup state based on url

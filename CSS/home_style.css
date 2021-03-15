@@ -8,7 +8,7 @@
 }
 
 html {
-	font-family: sans-serif;
+	font-family: "Arial";
 	overflow-x: hidden;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
@@ -25,6 +25,7 @@ body{
 :root {
 	--dark-green: #00312580;
 	--light-green: #007565a4;
+	--tag-green: #b1fde4a9;
 	--superlight-green: #a6fff249;
 }
 
@@ -80,6 +81,7 @@ body{
 }
 
 .top-banner-text-wrapper h1 {
+	margin-top: 2%;
 	width: fit-content;
     height: fit-content;
     color: white;
@@ -90,20 +92,22 @@ body{
 }
 
 .top-banner-text-wrapper h2 {
+	margin-top: 5%;
     width: fit-content;
     height: fit-content;
     color: white;
     font-size: 3vw;
-    font-family: "Merienda";
+    /* font-family: "Merienda"; */
 	/* background-color: hsla(100, 65%, 90%, 30%); */
 }
 
 .top-banner-text-wrapper h3 {
+	margin-top: 5%;
     width: fit-content;
     height: fit-content;
     color: white;
     font-size: 1.5vw;
-	font-family: "Merienda";
+	/* font-family: "Merienda"; */
 	text-align: left;
 	/* background-color: hsla(150, 65%, 90%, 30%); */
 }
@@ -113,7 +117,7 @@ body{
     height: fit-content;
     color: white;
     font-size: 1vw;
-	font-family: "Merienda";
+	/* font-family: "Merienda"; */
 	text-align: left;
 	/* background-color: hsla(150, 65%, 90%, 30%); */
 }
@@ -157,19 +161,20 @@ body{
 --------------------------------------------------------------*/
 .projects-container {
 	margin: 0 auto;
-	max-width: 80%;
+	max-width: 90%;
 	height: 130vh;
 	padding-top: 5%;
-	display: inline-block;
+	display: block;
 }
 
 .projects-container h1 {
-	font-family: "Merienda";
+	/* font-family: "Merienda"; */
     font-size: 35px;
 	text-align: center;
 }
 
 .projects-container h2 {
+	margin-top: 1%;
 	margin-bottom: 2%;
 	/* font-family: "FZShuTi"; */
 	font-family: 'Ma Shan Zheng', cursive;
@@ -179,38 +184,43 @@ body{
   
 .projects-container ul li {
 	margin: 2%;
-	width: 20%;
-	list-style: none;
+	width: 25%;
+	/* height: 30%; */
+	/* list-style: none; */
 	display: inline-block;
 	background-color: #FFFFFF;
 	/* border: 5px solid #FFFFFF;
 	border-radius: 10px; */
-	float: left;
+	/* float: center; */
+	/* overflow: hidden; */
 }
 
-.demo-img {
+.project-demo {
 	margin: 0;
 	width: 100%;
 	height: 100%;
 	float: left;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	/* justify-content: center; */
+	/* align-items: center; */
 
 	text-align: center;
 	vertical-align: middle;
 	position: relative;
+	/* z-index: 20; */
 
-	border-radius: 50%;
-	border: 5px solid var(--dark-green);
+	/* border-radius: 5%; */
+	/* border: 5px solid black; */
+	padding: 10px;
+	box-shadow: 5px 10px 8px var(--dark-green);
 
 	background-repeat: no-repeat;
 	background-size: cover;
 
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
-.demo-img:after {
+.project-demo:after {
 	position: absolute;
 	content: " ";
 	top: 0;
@@ -218,29 +228,62 @@ body{
 	width: 100%;
 	height: 100%;
 	z-index: 0;
-	background-color: var(--dark-green);
+	background-color: var(--superlight-green);
 	display: none;
 }
 
-.demo-img:hover:after {
+.project-demo:hover:after {
 	display: block;
 	cursor: pointer;
 }
 
-.demo-img p {
-	font-family: "FZShuTi";
-	font-size: 20px;
-	color: #FFFFFF;
-	visibility: hidden;
+.project-demo img {
+	height: 100%;
+	object-fit: contain;
+	float: left;
+}
+
+.demo-description {
+	width: 100%;
+	/* object-fit: fill; */
+}
+
+.demo-description h1 {
+	margin-left: 5%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	/* font-family: "Arial"; */
+	/* font-family: "Merienda"; */
+    font-size: 24px;
+	text-align: left;
+}
+
+.demo-description h2 {
+	margin-left: 5%;
+	padding: 2px;
+	display: block;
+	background-color: var(--tag-green);
+	font-family: "Arial";
+	/* font-family: "FZShuTi"; */
+    font-size: 15px;
+	float: left;
+	text-align: center;
+	/* border-radius: 15%; */
+}
+
+.demo-description p {
+	margin-left: 5%;
+	display: block;
+	/* font-family: "FZShuTi"; */
+	/* font-family: "Arial"; */
+	font-size: 15px;
+	color: #000000;
+	visibility: visible;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	user-select: none;
-}
-
-.demo-img:hover p {
-	visibility: visible;
-	z-index: 2;
-	cursor: pointer;
+	float: left;
+	text-align: left;
 }
 
 /*--------------------------------------------------------------
@@ -273,24 +316,24 @@ Modal box styles
 }
 
 .modal-content h1 {
-	font-family: "Merienda";
+	/* font-family: "Merienda"; */
     font-size: 2.5vw;
 	/* background-image: linear-gradient(to right, rgba(92, 192, 255, 0.4) , white); */
 }
 
 .modal-content h2 {
-	font-family: "Merienda";
+	/* font-family: "Merienda"; */
     font-size: 1.5vw;
 	/* background-image: linear-gradient(to right, rgba(92, 192, 255, 0.4) , white); */
 }
 
 .modal-content h3 {
-	font-family: "Merienda";
+	/* font-family: "Merienda"; */
     font-size: 1vw;
 }
 
 .modal-content p {
-	font-family: "Merienda";
+	/* font-family: "Merienda"; */
     font-size: 0.9vw;
 }
 
@@ -308,7 +351,7 @@ Modal box styles
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-family: "Merienda";
+	/* font-family: "Merienda"; */
 	font-size: 16px;
 }
 
@@ -543,7 +586,7 @@ Footer styles
 
 .footer-widgets h4 {
 	margin-bottom: 5%;
-	font-family: "Merienda";
+	/* font-family: "Merienda"; */
   font-size: 1.5em;
 }
 
