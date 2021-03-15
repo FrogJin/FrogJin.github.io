@@ -1,53 +1,42 @@
-var slideIndex = 1;
+var slide_idx = 1;
 
 /******************************************
  * Setup page when ready
  ******************************************/
 $(document).ready(function(){
-  // First Arrow
-  // $(".top-banner-arrow").on('click', function(event) {
-  //   event.preventDefault();
-  //   $('html, body').animate({scrollTop: $('.projects-container').offset().top}, 800);
-  // });
-
   // TODO: Change px to % so element will auto resize when window is resized
   var pcw = $('.projects-container ul li').width()
   $('.projects-container ul li').css({
     'height': pcw + 'px'
   })
 
-  // Second Arrow
-  // $(".story-arrow").on('click', function(event) {
-  //   event.preventDefault();
-  //   $('html, body').animate({scrollTop: $('.career-banner').offset().top}, 800);
-  // });
+  // Setup state based on url
+  var url = window.location.href;
+  if (url.includes("?")) {
+    var base_url = url.split("?")[0];
+    var project_name = url.split("?")[1].split("=")[1];
+    history.pushState({project: "none"}, "none", base_url);
+    demo(project_name);
+  }
 });
-
 
 /******************************************
  * Modal boxes logic and functions
  ******************************************/
+function demoOnClick(event, project_name) {
+  event.preventDefault;
+  demo(project_name);
+}
+
 function demo(project_name) {
-  // if (project_name == "me495") {
-  //   document.getElementById("me495Modal").style.display = "block";
-  // } else if (project_name == "me449") {
-  //   document.getElementById("me449Modal").style.display = "block";
-  // } else if (project_name == "ece498") {
-  //   document.getElementById("ece498Modal").style.display = "block";
-  // }
+  history.pushState({project: project_name}, project_name, "?project=" + project_name);
   document.getElementById(project_name.concat("Modal")).style.display = "block";
-  showSlides(project_name, slideIndex = 1)
+  showSlides(project_name, slide_idx = 1);
 }
 
 function closeDemo(project_name) {
-  // if (project_name == "ece498") {
-  //   document.getElementById("ece498Modal").style.display = "none";
-  // } else if (project_name == "me449") {
-  //   document.getElementById("me495Modal").style.display = "none";
-  // } else if (project_name == "me495") {
-  //   document.getElementById("me495Modal").style.display = "none";
-  // }
   document.getElementById(project_name.concat("Modal")).style.display = "none";
+  history.back();
 }
 
 // TODO: Hide body y scroll bar when modals are opened
@@ -61,8 +50,10 @@ function closeDemo(project_name) {
 // }
 
 window.onclick = function(event) {
+  // Hide modals
   if (event.target.className == "modal") {
     event.target.style.display = "none";
+    history.back();
   }
 }
 
@@ -70,11 +61,11 @@ window.onclick = function(event) {
  * Gallery logic and functions
  ******************************************/
 function plusSlides(project_name, n) {
-  showSlides(project_name, slideIndex += n);
+  showSlides(project_name, slide_idx += n);
 }
 
 function currentSlides(project_name, n) {
-  showSlides(project_name, slideIndex = n)
+  showSlides(project_name, slide_idx = n);
 }
 
 function showSlides(project_name, n) {
@@ -84,23 +75,23 @@ function showSlides(project_name, n) {
   var dots = gallery.getElementsByClassName("gallery-demo");
   var captions = gallery.getElementsByClassName("demo-caption");
   var captionText = document.getElementById(project_name.concat("Caption"));
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) {slide_idx = 1}
+  if (n < 1) {slide_idx = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = captions[slideIndex-1].innerHTML;
+  slides[slide_idx-1].style.display = "block";
+  dots[slide_idx-1].className += " active";
+  captionText.innerHTML = captions[slide_idx-1].innerHTML;
 }
 
 /******************************************
  * Footer logic and functions
  ******************************************/
-document.getElementById("footerSubmitButton").onclick = function() {
-  alert("Message Submitted!");
-  document.getElementById("footerMessage").value = "";
-}
+// document.getElementById("footerSubmitButton").onclick = function() {
+//   alert("Message Submitted!");
+//   document.getElementById("footerMessage").value = "";
+// }
