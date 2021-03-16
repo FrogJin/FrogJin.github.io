@@ -354,13 +354,29 @@
             <a href="https://www.adafruit.com/product/3211" target="_blank">RGB Matrix Bonnet</a> as the front display module for the CHAMELEON. The LED Matrix can cover most of the turtlebot, leaving only 
             part of the LiDAR at top, and part of the wheels at the bottom visible to the audience.
           </p>
+          
+          <div style="display: flex; justify-content: center; text-align: center; margin-top: 5%;">
+            <div style="float: left; width: 30%; margin: auto;">
+              <figure>
+                <img src="files/projects/me499_winter_project/front.png" alt="Front" style="width: 100%;"/>
+                <figcaption>Fig.1 - 64x64 Matrix fixed to turtlebot by 2 L Brackets</figcaption>
+              </figure>
+            </div>
+            <div style="float: left; width: 30%; margin: auto;">
+              <figure>
+                <img src="files/projects/me499_winter_project/back.png" alt="Back" style="width: 100%;"/>
+                <figcaption>Fig.2 - Arducam fixed to turtlebot by 2 Ties</figcaption>
+              </figure>
+            </div>
+          </div>
+
           <h2 class="sub-heading">LED Matrix</h2>
           <p>
             The LED Matrix is initialized with the following parameters:
             <ul>
               <li>Hardware gpio mapping: adafruit-hat (compatible with the bonnet I used)</li>
               <li>Refresh rate: >=400Hz</li>
-              <li>Brightness level: 80%</li>
+              <li>Brightness level: 5% for grssland & desert demo; 80% for chemeleon demo</li>
             </ul>
             The offscreen canvas is enabled to allow pixel drawing on the offscreen canvas and swap canvas among refreshing, which provides more stable display.</br>
             The screen flushing performance as shown in the demo might due to computer vision algorithm competing with the matrix bonnet for the memory bus. The issue is expected
@@ -368,13 +384,41 @@
           </p>
           <h2 class="sub-heading">Computer Vision</h2>
           <p>
-            The computer vision part of the project relies on the opencv2 C++ module. Once the camera take the picture at the back, the picture is cropped based on a linear index 
+            The computer vision part of the project relies on the opencv2 C++ module. Once the camera take the picture at the back, the picture is cropped based on a linear perspective index 
           </p>
-          <h3>$$index = {pose_{end} - pose_{start} \over duration}.$$</h3>
+          <h3>$$perspective index = {pose_{end} - pose_{start} \over duration}.$$</h3>
           <p>
-            which compensates the changing of the viewing angle of the audience as the robot move. By applying Hough Circle Transform on the cropped image, the color of the corresponding
+            which compensates the changing of the perspective of the audience as the robot move. By applying Hough Circle Transform on the cropped image, the color of the corresponding
             pixels of the recognized circles are set and draw on the offscreen canvas, which will be swap to the matrix on next vertical synchronization.
           </p>
+          
+          <div style="display: flex; justify-content: center; text-align: center; margin-top: 5%;">
+            <div style="float: left; width: 30%; margin: auto;">
+              <figure>
+                <img src="files/projects/me499_winter_project/img_before_cropped.png" alt="Image before cropped" style="width: 100%;"/>
+                <figcaption>Fig.3 - Image capture by camera</figcaption>
+              </figure>
+            </div>
+            <div style="float: left; width: 5%; margin: auto;">
+              <img src="files/images/arrow_right.png" alt="arrow" style="width: 100%;"/>
+            </div>
+            <div style="float: left; width: 30%; margin: auto;">
+              <figure>
+                <img src="files/projects/me499_winter_project/img_cropped.png" alt="Image after cropped" style="width: 100%;"/>
+                <figcaption>Fig.4 - Image cropped based on perspective index</figcaption>
+              </figure>
+            </div>
+            <div style="float: left; width: 5%; margin: auto;">
+              <img src="files/images/arrow_right.png" alt="arrow" style="width: 100%;"/>
+            </div>
+            <div style="float: left; width: 30%; margin: auto;">
+              <figure>
+                <img src="files/projects/me499_winter_project/img_hough_circles.png" alt="Apply Hough Circles transform" style="width: 100%;"/>
+                <figcaption>Fig.5 - Apply Hough Circles transform</figcaption>
+              </figure>
+            </div>
+          </div>
+
           <h2 class="sub-heading">Demonstration</h2>
           <p>
             The CHAMELEON drive in two different scenarios
