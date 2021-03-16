@@ -278,7 +278,7 @@
           <div class="slides">
             <div class="number-text">2 / 5</div>
             <video class="slide-video" controls>
-              <source src="files/projects/me499_winter_project/video_0.mp4" type="video/mp4">
+              <source src="files/projects/me499_winter_project/video_1.mp4" type="video/mp4">
             </video>
           </div>
           <div class="slides">
@@ -306,14 +306,14 @@
               <div class="gallery-demo cursor" onclick="currentSlides('me499', 1)">
                 <img class="demo-poster" src="files/projects/me499_winter_project/video_0_poster.png" style="width: 100%;">
                 <img class="demo-cover" src="files/images/video_play.png" style="width: 40%;">
-                <h1 class="demo-caption">CHAMELEON Demo 1</h1>
+                <h1 class="demo-caption">CHAMELEON Demo (chameleon poster background)</h1>
               </div>
             </div>
             <div class="column-me499">
               <div class="gallery-demo cursor" onclick="currentSlides('me499', 2)">
-                <img class="demo-poster" src="files/projects/me499_winter_project/video_0_poster.png" style="width: 100%;">
+                <img class="demo-poster" src="files/projects/me499_winter_project/video_1_poster.png" style="width: 100%;">
                 <img class="demo-cover" src="files/images/video_play.png" style="width: 40%;">
-                <h1 class="demo-caption">CHAMELEON Demo 2</h1>
+                <h1 class="demo-caption">CHAMELEON Demo (grassland & desert posters background)</h1>
               </div>
             </div>
             <div class="column-me499">
@@ -373,14 +373,12 @@
           <h2 class="sub-heading">LED Matrix</h2>
           <p>
             The LED Matrix is initialized with the following parameters:
-            <ul>
-              <li>Hardware gpio mapping: adafruit-hat (compatible with the bonnet I used)</li>
-              <li>Refresh rate: >=400Hz</li>
-              <li>Brightness level: 5% for grssland & desert demo; 80% for chemeleon demo</li>
+            <ul style="list-style-type:disc">
+              <li style="margin-left:1em">Hardware gpio mapping: adafruit-hat (compatible with the bonnet I used)</li>
+              <li style="margin-left:1em">Refresh rate: >=400Hz</li>
+              <li style="margin-left:1em">Brightness level: 5% for grssland & desert demo; 80% for chemeleon demo</li>
             </ul>
-            The offscreen canvas is enabled to allow pixel drawing on the offscreen canvas and swap canvas among refreshing, which provides more stable display.</br>
-            The screen flushing performance as shown in the demo might due to computer vision algorithm competing with the matrix bonnet for the memory bus. The issue is expected
-            to be solved by improving algorithm.
+            The offscreen canvas is enabled to allow pixel drawing on the offscreen canvas and swap canvas among refreshing, which provides more stable display.
           </p>
           <h2 class="sub-heading">Computer Vision</h2>
           <p>
@@ -422,16 +420,37 @@
           <h2 class="sub-heading">Demonstration</h2>
           <p>
             The CHAMELEON drive in two different scenarios
-            <ul>
-              <li>One pixelated chameleon poster at the back</li>
-              <li>Two pixelated landscape (grassland & desert) poster at the back</li>
+            <ul style="list-style-type:disc">
+              <li style="margin-left:1em">One pixelated chameleon poster at the back</li>
+              <li style="margin-left:1em">Two pixelated landscape (grassland & desert) poster at the back</li>
             </ul>
           </p>
         </div>
 
-        <div id="me499Close" class="modal-nav" style="padding-top: 3%;">
-          <button onclick="location.href='https://github.com/FrogJin/ME499_Chameleon'">Github Page</a>
-          <button onclick="closeDemo('me499')">Close Project</button>
+        <h2 class="sub-heading">Future Work</h2>
+          <ul style="list-style-type:disc">
+            <li style="margin-left:1em">
+              The screen flushing performance as shown in the demo might due to computer vision algorithm competing with the matrix bonnet for the memory bus. The issue is expected
+              to be solved by improving algorithm.
+            </li>
+            <li style="margin-left:1em">
+              Current implement shows the concept of basic camouflage, but is limited by the audience perspective. If the use see the CHAMELEON from the left/right, it is no longer camouflaged.
+              Some potential solution for the problem are
+              <ul style="list-style-type:disc">
+                <li style="margin-left:2em">
+                  Put more screens around the turtlebot to cover every perspective.
+                </li>
+                <li style="margin-left:2em">
+                  Add a sensor to detect the location of the audience, then rotate and update the screen accordingly.
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div id="me499Close" class="modal-nav" style="padding-top: 3%;">
+            <button onclick="location.href='https://github.com/FrogJin/ME499_Chameleon'">Github Page</a>
+            <button onclick="closeDemo('me499')">Close Project</button>
+          </div>
         </div>
       </div>
     </div>
