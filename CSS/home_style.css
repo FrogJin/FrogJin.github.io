@@ -479,6 +479,18 @@ Modal box styles
 	clear: both;
 }
 
+/* 2 videos, 3 images */
+.column-me499 {
+	position: relative;
+	float: left;
+	margin-left: 0.5%;
+	margin-right: 0.5%;
+	margin-top: auto;
+	margin-bottom: auto;
+	padding-top: 0.5%;
+	width: 15%;
+}
+
 /* 1 Image, 4 videos */
 .column-me495f {
 	position: relative;
