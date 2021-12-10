@@ -335,46 +335,46 @@
           <h2 class="heading">Architecture</h2>
           <h2 class="sub-heading">Version 1</h2>
           <p>
-            The first version of design I came up with is to add an additional Bluetooth Low Energy (BLE) module to the Raspberry Pi (Model 3B+).
-            The BLE module I used is <a href="https://www.adafruit.com/product/4062" target="_blank">the Adafruit Feather nRF52840 Express</a>.</br>
-            With the help of the existing <a href="https://github.com/adafruit/Adafruit_nRF52_Arduino" target="_blank">nRF52 Arduino package</a>, I was able to capture 
-            the usb mouse signals, pass it on to nRF52840 through the serial port using python script, and have the nRF52840 running an Arduino script which send the mouse
-            signals to a Linux laptop through BLE.
+            In the first version of design I came up with, I utilize the Raspberry Pi built-in bluetooth.</br>
+            With reference to <a href="https://github.com/quangthanh010290/keyboard_mouse_emulate_on_raspberry" target="_blank">the Keyboard & mouse emulate project by thanhle</a>, 
+            I was able to pass the usb mouse signals through the built-in bluetooth of Raspberry Pi. Then by adding a udev rule to the linux computer which invokes a script calling the 
+            <a href="https://xboxdrv.gitlab.io/" target="_blank">Xboxdrv</a>, I managed to map the mouse buttons & axis to a standard xbox gamepad, which I could use to play xbox
+            supported games as shown in the demo video.
           </p>
 
           <div style="display: flex; justify-content: center; text-align: center; margin-top: 5%;">
             <div style="float: left; width: 40%; margin: auto;">
               <figure>
-                <img src="files/projects/master_final_project/mfpversion1.jpeg" alt="Front" style="width: 100%;"/>
+                <img src="files/projects/master_final_project/mfpversion1.jpg" alt="Front" style="width: 100%;"/>
                 <figcaption>Fig.1 - Architecture Version 1</figcaption>
               </figure>
             </div>
           </div>
-        
-          <h2 class="sub-heading">Problems</h2>
-          <ul style="list-style-type:disc">
-            <li style="margin-left:1em">Linux support for BLE (even BT in general) is unstable and still under improvement.</li>
-            <li style="margin-left:1em">Culminating delay happens due to multiple layers of communication (USB to serial to BLE).</li>
-          </ul>
-        </div>
 
         <h2 class="sub-heading">Version 2</h2>
         <p>
-          In the second version of design, I removed the nRF52840 (BLE module) and utilize the Raspberry Pi built-in bluetooth.</br>
-          With reference to <a href="https://github.com/quangthanh010290/keyboard_mouse_emulate_on_raspberry" target="_blank">the Keyboard & mouse emulate project by thanhle</a>, 
-          I was able to pass the usb mouse signals through the built-in bluetooth of Raspberry Pi. Then by adding a udev rule to the linux computer which invokes a script calling the 
-          <a href="https://xboxdrv.gitlab.io/" target="_blank">Xboxdrv</a>, I managed to map the mouse buttons & axis to a standard xbox gamepad, which I could use to play xbox
-          supported games as shown in the demo video.
+          In the second version of design, I added an additional Bluetooth Low Energy (BLE) module to the Raspberry Pi (Model 3B+).
+          The BLE module I used is <a href="https://www.adafruit.com/product/4062" target="_blank">the Adafruit Feather nRF52840 Express</a>.</br>
+          With the help of the existing <a href="https://github.com/adafruit/Adafruit_nRF52_Arduino" target="_blank">nRF52 Arduino package</a>, I was able to capture 
+          the usb mouse signals, pass it on to nRF52840 through the serial port using python script, and have the nRF52840 running an Arduino script which send the mouse
+          signals to a Linux laptop through BLE.
         </p>
 
         <div style="display: flex; justify-content: center; text-align: center; margin-top: 5%;">
           <div style="float: left; width: 40%; margin: auto;">
             <figure>
-              <img src="files/projects/master_final_project/mfpversion2.jpg" alt="Front" style="width: 100%;"/>
-              <figcaption>Fig.1 - Architecture Version 1</figcaption>
+              <img src="files/projects/master_final_project/mfpversion2.jpeg" alt="Front" style="width: 100%;"/>
+              <figcaption>Fig.2 - Architecture Version 2</figcaption>
             </figure>
           </div>
         </div>
+        
+        <h2 class="sub-heading">Problems</h2>
+        <ul style="list-style-type:disc">
+          <li style="margin-left:1em">Linux support for BLE (even BT in general) is unstable and still under improvement.</li>
+          <li style="margin-left:1em">Culminating delay happens due to multiple layers of communication (USB to serial to BLE), especially when using the nRF52840 module.</li>
+        </ul>
+      </div>
 
         <div id="mfpFuture" style="padding-top: 3%;">
           <h2 class="heading">Future Works</h2>
