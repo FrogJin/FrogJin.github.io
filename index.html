@@ -336,7 +336,6 @@
           <h2 class="sub-heading">Version 1</h2>
           <p>
             In the first version of design I came up with, I utilize the Raspberry Pi built-in bluetooth.</br>
-            With reference to <a href="https://github.com/quangthanh010290/keyboard_mouse_emulate_on_raspberry" target="_blank">the Keyboard & mouse emulate project by thanhle</a>, 
             I was able to pass the usb mouse signals through the built-in bluetooth of Raspberry Pi. Then by adding a udev rule to the linux computer which invokes a script calling the 
             <a href="https://xboxdrv.gitlab.io/" target="_blank">Xboxdrv</a>, I managed to map the mouse buttons & axis to a standard xbox gamepad, which I could use to play xbox
             supported games as shown in the demo video.
@@ -350,6 +349,25 @@
               </figure>
             </div>
           </div>
+
+          <h2 class="sub-heading">Steps</h2>
+          <ul style="list-style-type:disc">
+            <li style="margin-left:1em">Learn about <a href="https://www.bluetooth.com/specifications/" target="_blank">bluetooth specifications</a> in detail.</li>
+              <ul>
+                <li style="margin-left:2em">Report descriptors describe a set of reports and items within reports.</li>
+                <li style="margin-left:2em">HID service records identify the services which Bluetooth devices provide (device/host/both).</li>
+                <li style="margin-left:2em">Input reports provide low-latency delivery information from device to host (Key press, change in positions).</li>
+                <li style="margin-left:2em">Output reports provide low latency delivery of information from host to device.</li>
+                <li style="margin-left:2em">The Bluetooth HID Protocol (HIDP) operates over the Bluetooth L2CAP layer is an adaptation of the USB HID Protocol.</li>
+                <li style="margin-left:2em">All HIDP messages between device & host are preceded by a 1-octet Bluetooth HID Protocol Header (HIDP-Hdr).</li>
+                <li style="margin-left:2em">Boot Protocol is currently only defined for keyboards and mice, not for gamepad/joystick yet.</li>
+                <li style="margin-left:2em">Implement Service Discovery Protocol (SDP) seems promising at a first glance.</li>
+              </ul>
+            <li style="margin-left:1em">Furture reading into SDP implementation by reading <a href="https://people.csail.mit.edu/albert/bluez-intro/index.html" target="_blank">An Introduction to Bluetooth Programming</a> by Albert Huang.</li>
+            <li style="margin-left:1em">Learn about Pi built-in bluetooth and turn it into a bluetooth mouse. (reference to <a href="https://github.com/quangthanh010290/keyboard_mouse_emulate_on_raspberry" target="_blank">the Keyboard & mouse emulate project</a> by thanhle)</li>
+            <li style="margin-left:1em">Write Udev rule which triggers bash script when detect specific bluetooth mouse connection.</li>
+            <li style="margin-left:1em">Code bash scipt that calls Xboxdrv to map mouse buttons & axis to standard Xbox controller.</li>
+          </ul>
 
         <h2 class="sub-heading">Version 2</h2>
         <p>
@@ -368,10 +386,21 @@
             </figure>
           </div>
         </div>
+
+        <h2 class="sub-heading">Steps</h2>
+        <ul style="list-style-type:disc">
+          <li style="margin-left:1em">Learn about <a href="https://cdn-learn.adafruit.com/assets/assets/000/092/427/original/nRF52840_PS_v1.1.pdf" target="_blank">nRF52840 specifications</a> in detail.</li>
+          <li style="margin-left:1em">Reporduce <a href="https://learn.adafruit.com/atarifruit-2600-joystick/overview" target="_blank">AtariFruit 2600 Joystick</a> by John Park.</li>
+          <li style="margin-left:1em">With furture understanding of <a href="https://github.com/adafruit/Adafruit_nRF52_Arduino" target="_blank">the nRF52 arduino library</a>, I tried to write a 
+            custom class to send bluetooth gamepad report but failed. The developers put a recent update which includes an example of the bluetooth gamepad but ends up failing as well (might have
+            something to do with bluetooth boot protocol not supporting gamepad at all).</li>
+          <li style="margin-left:1em">Fall back to working bluetooth mouse code, and write udev rule which triggers bash script when detect specific bluetooth mouse connection.</li>
+          <li style="margin-left:1em">Code bash scipt that calls Xboxdrv to map mouse buttons & axis to standard Xbox controller.</li>
+        </ul>
         
         <h2 class="sub-heading">Problems</h2>
         <ul style="list-style-type:disc">
-          <li style="margin-left:1em">Linux support for BLE (even BT in general) is unstable and still under improvement.</li>
+          <li style="margin-left:1em">Linux support for BLE (even BT in general) is unstable and still under improvement. Different updates & verions of bluetooth on different device can easily mess up the connection.</li>
           <li style="margin-left:1em">Culminating delay happens due to multiple layers of communication (USB to serial to BLE), especially when using the nRF52840 module.</li>
         </ul>
       </div>
